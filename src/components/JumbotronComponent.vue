@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper d-flex py-5">
     <b-container>
-      <b-row class="no-gutters" align-v="start">
+      <b-row class="no-gutters mb-5" align-v="start">
         <b-col cols="12" md="7">
           <FeaturedArticle :article="featured" />
         </b-col>

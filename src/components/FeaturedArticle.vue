@@ -1,9 +1,33 @@
 <template>
   <div
-    class="featured-article"
+    class="featured-article text-white d-flex align-items-end"
     v-bind:style="{ backgroundImage: 'url(' + article.image_url + ')' }"
   >
-    <div>lorem</div>
+    <div class="w-100 text-left">
+      <b-button
+        class="mb-4 text-uppercase bg-white py-2 border-0 text-dark"
+        size="sm"
+        ><strong>{{ article.type }}</strong></b-button
+      >
+      <div>
+        <h2>
+          <strong>{{ article.post_title }}</strong>
+        </h2>
+      </div>
+
+      <div class="d-flex mb-3">
+        <div class="mr-5 d-flex align-items-center">
+          <strong class="mr-1"
+            ><b-avatar :src="article.user.user_image" class="mr-1"></b-avatar
+          ></strong>
+          <strong>{{ article.user.user_name }}</strong>
+        </div>
+        <div class="d-flex align-items-center">
+          <b-icon-clock font-scale="1.5" class="mr-2"></b-icon-clock>
+          <strong>{{ moment(article.created_date).format("LL") }}</strong>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
