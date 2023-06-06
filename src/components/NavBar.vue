@@ -2,7 +2,7 @@
   <nav class="header-wrapper border-bottom py-3 p-sm-5">
     <b-row align-v="center" class="no-gutters">
       <b-col class="d-none d-sm-block">
-        <SocialsComponent />
+        <SocialsComponent :size="1.2" />
       </b-col>
       <b-col>
         <LogoComponent />
