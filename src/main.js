@@ -10,6 +10,8 @@ import { BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import '@/assets/_custom.scss'; 
+
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 Vue.prototype.moment = moment
