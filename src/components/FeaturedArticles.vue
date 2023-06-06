@@ -34,10 +34,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/_custom.scss";
+
 .featured-articles {
   height: 350px;
   padding-left: 3em;
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-mobile) {
     height: 450px;
   }
 }

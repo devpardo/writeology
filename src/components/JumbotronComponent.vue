@@ -3,7 +3,7 @@
     <b-container>
       <b-row class="no-gutters mb-5" align-v="start">
         <b-col cols="12" md="7">
-          <FeaturedArticle :article="featured" />
+          <FeaturedArticle :article="featuredArticle" />
         </b-col>
         <b-col cols="12" md="5">
           <FeaturedArticles :articles="articles" />
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
 import FeaturedArticles from "@/components/FeaturedArticles";
 import FeaturedArticle from "@/components/FeaturedArticle";
 
@@ -24,25 +23,16 @@ export default {
     FeaturedArticles,
     FeaturedArticle,
   },
-  data: () => ({
-    featured: {},
-  }),
-  computed: {
-    ...mapGetters(["getArticles"]),
-    articles() {
-      return this.getArticles;
+  props: {
+    articles: {
+      type: Array,
+      required: true,
     },
+  },
+  computed: {
     featuredArticle() {
       return this.articles.find((item) => item.is_featured);
     },
-  },
-  mounted() {
-    this.fetchArticles();
-
-    this.featured = this.articles.find((item) => item.is_featured);
-  },
-  methods: {
-    ...mapActions(["fetchArticles"]),
   },
 };
 </script>

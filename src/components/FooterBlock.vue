@@ -1,6 +1,6 @@
 <template>
   <footer class="py-5 border-top">
-    <b-row>
+    <b-row class="no-gutters">
       <b-col>
         Copyright © Writeology X | Designed by BRIX Templates - Powered by
         Webflow

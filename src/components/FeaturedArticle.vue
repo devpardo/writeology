@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="article"
     class="featured-article text-white d-flex align-items-end"
     v-bind:style="{ backgroundImage: 'url(' + article.image_url + ')' }"
   >
@@ -37,13 +38,14 @@ export default {
   props: {
     article: {
       required: true,
-      type: Object,
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/custom.scss";
+
 .featured-article {
   height: 350px;
   background-position: center;
@@ -57,7 +59,7 @@ export default {
   margin: 0 auto;
   border-radius: 0.8em;
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-mobile) {
     height: 450px;
   }
 

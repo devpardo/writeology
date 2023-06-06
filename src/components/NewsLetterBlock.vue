@@ -1,7 +1,7 @@
 <template>
   <section class="py-5 test">
-    <b-container>
-      <b-row>
+    <b-container class="p-0">
+      <b-row class="no-gutters">
         <b-col cols="12" md="6" offset-md="3"
           ><h3><strong>Subscribe to our newsletter</strong></h3>
           <p>
