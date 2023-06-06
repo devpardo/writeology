@@ -1,6 +1,6 @@
 <template>
-  <section class="py-5 test">
-    <b-container class="p-0">
+  <section class="py-5">
+    <b-container>
       <b-row class="no-gutters">
         <b-col cols="12" md="6" offset-md="3"
           ><h3><strong>Subscribe to our newsletter</strong></h3>
@@ -13,9 +13,9 @@
 
       <b-row class="py-5">
         <b-col cols="12" md="6" offset-md="3">
-          <b-row class="no-gutters">
+          <b-row class="">
             <b-col cols="12" md="9" class="mb-2 mb-sm-0">
-              <b-form class="d-flex">
+              <b-form>
                 <b-form-input
                   id="inline-form-input-name"
                   class="subscribe-email mr-sm-1"
