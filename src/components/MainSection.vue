@@ -29,7 +29,7 @@ export default {
       let sortMe = test.sort(
         (a, b) => new Date(b.post_created_date) - new Date(a.post_created_date)
       );
-      return sortMe;
+      return sortMe.splice(0, 5);
     },
   },
   components: { LatestArticleItem },

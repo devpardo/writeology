@@ -14,7 +14,7 @@
         "image_url": "https://picsum.photos/800/1000/?image=54",
         "user": {
             "user_name": "John Doe",
-            "user_image": "https://i.pravatar.cc/250"
+            "user_image": "https://i.pravatar.cc/222"
         },
         "premium_content": false,
         "is_featured": true
@@ -34,7 +34,7 @@
         "image_url": "https://picsum.photos/800/1000/?image=53",
         "user": {
             "user_name": "Franco Neven",
-            "user_image": "https://i.pravatar.cc/250"
+            "user_image": "https://i.pravatar.cc/240"
         },
         "premium_content": false,
         "is_featured": false
@@ -54,7 +54,7 @@
         "image_url": "https://picsum.photos/800/1000//?image=32",
         "user": {
             "user_name": "Arlott Core",
-            "user_image": "https://i.pravatar.cc/250"
+            "user_image": "https://i.pravatar.cc/200"
         },
         "premium_content": false,
         "is_featured": false
@@ -74,7 +74,7 @@
         "image_url": "https://picsum.photos/800/1000/?image=16",
         "user": {
             "user_name": "Phillip Jade",
-            "user_image": "https://i.pravatar.cc/250"
+            "user_image": "https://i.pravatar.cc/251"
         },
         "premium_content": false,
         "is_featured": false
@@ -94,7 +94,7 @@
         "image_url": "https://picsum.photos/800/1000/?image=26",
         "user": {
             "user_name": "Jane Carrie",
-            "user_image": "https://i.pravatar.cc/250"
+            "user_image": "https://i.pravatar.cc/210"
         },
         "premium_content": false,
         "is_featured": false
@@ -113,7 +113,7 @@
         "likes": 5221,
         "image_url": "https://picsum.photos/800/1000/?image=88",
         "user": {
-            "user_name": "Jane Carrie",
+            "user_name": "Janette Aras",
             "user_image": "https://i.pravatar.cc/250"
         },
         "premium_content": true,
@@ -133,8 +133,8 @@
         "likes": 5221,
         "image_url": "https://picsum.photos/800/1000/?image=21",
         "user": {
-            "user_name": "Jane Carrie",
-            "user_image": "https://i.pravatar.cc/250"
+            "user_name": "Cong Teebbe",
+            "user_image": "https://i.pravatar.cc/299"
         },
         "premium_content": true,
         "is_featured": false
@@ -153,8 +153,8 @@
         "likes": 5221,
         "image_url": "https://picsum.photos/800/1000/?image=11",
         "user": {
-            "user_name": "Jane Carrie",
-            "user_image": "https://i.pravatar.cc/250"
+            "user_name": "Junne Raple",
+            "user_image": "https://i.pravatar.cc/226"
         },
         "premium_content": true,
         "is_featured": false
