@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3">
+  <div class="px-sm-3">
     <LogoComponent />
 
     <div class="mt-4 text-muted text-left">

@@ -1,5 +1,5 @@
 <template>
-  <div class="my-5 px-3">
+  <div class="my-5">
     <div
       class="popular-article d-flex align-items-end"
       :style="{
@@ -17,24 +17,37 @@
     </div>
 
     <div class="text-left mt-5">
-      <div>dasdas</div>
+      <h3 class="mb-4">Popular Articles</h3>
+      <div v-for="(item, index) in popularArticles" :key="index">
+        <PopularArticleItem :article="item" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import PopularArticleItem from "@/components/PopularArticleItem";
 export default {
   name: "PopularArticles",
   data: () => ({
     image: "https://picsum.photos/800/1000/?image=99",
   }),
-  computed: {
-    ...mapGetters(["getArticles"]),
-    article() {
-      return this.getArticles.filter((item) => item.type == "resources")[0];
+  props: {
+    articles: {
+      type: Array,
     },
   },
+  computed: {
+    article() {
+      return this.articles.filter((item) => item.type == "resources")[0];
+    },
+    popularArticles() {
+      let articles = [...this.articles];
+      let sortedArticles = articles.sort((a, b) => b.likes - a.likes);
+      return sortedArticles.splice(0, 3);
+    },
+  },
+  components: { PopularArticleItem },
 };
 </script>
 

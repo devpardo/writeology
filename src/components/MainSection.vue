@@ -9,8 +9,7 @@
       </b-col>
       <b-col cols="12" md="4" class="px-3">
         <SearchComponent />
-
-        <PopularArticles />
+        <PopularArticles :articles="articles" />
       </b-col>
     </b-row>
   </b-container>
