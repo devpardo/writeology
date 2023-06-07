@@ -95,7 +95,7 @@ export default {
   }
 
   .contact-card {
-    border-radius: 0.8em;
+    border-radius: 0.8em !important;
   }
 }
 </style>

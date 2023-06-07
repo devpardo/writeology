@@ -19,7 +19,9 @@
             <li class="list-inline-item">
               <router-link to="/">Home</router-link>
             </li>
-            <li class="list-inline-item">Pages</li>
+            <li class="list-inline-item cursor-pointer" id="popover-2">
+              Pages
+            </li>
             <li class="list-inline-item">Categories</li>
             <li class="list-inline-item">
               <router-link to="/contact">Contact</router-link>
@@ -30,6 +32,33 @@
           </ul>
         </b-col>
       </b-row>
+
+      <b-popover target="popover-2" triggers="hover focus" placement="bottom">
+        <div class="p-2">
+          <b-row>
+            <b-col>
+              <h6>PAGES</h6>
+              <ul class="list-inline">
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+              </ul>
+            </b-col>
+            <b-col>
+              <h6>UTILITY PAGES</h6>
+              <ul class="list-inline">
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+                <li class="list-inline-item text-muted pb-2">Lorem, ipsum.</li>
+              </ul>
+            </b-col>
+          </b-row>
+        </div>
+      </b-popover>
     </nav>
 
     <div class="mobile-menu d-sm-none slideInDown animated" v-if="menuOpen">
@@ -109,6 +138,16 @@ export default {
       }
     }
   }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}
+
+.popover {
+  min-width: 400px;
+  max-width: 30vw !important;
+  height: 250px;
 }
 
 @keyframes slideInDown {

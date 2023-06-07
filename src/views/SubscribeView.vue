@@ -31,11 +31,11 @@ export default {
 <style lang="scss">
 .subscribe-card {
   margin-top: 3em;
-  border-radius: 0.8em;
+  border-radius: 0.8em !important;
 
   .card-title {
-    font-size: 4em;
-    font-weight: bolder;
+    font-size: 3em;
+    font-weight: 900;
   }
 }
 </style>
