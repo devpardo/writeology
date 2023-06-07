@@ -39,7 +39,9 @@ export default {
       let sortMe = test.sort(
         (a, b) => new Date(b.post_created_date) - new Date(a.post_created_date)
       );
-      return sortMe.splice(0, 5);
+
+      let notPremium = sortMe.filter((item) => !item.premium_content);
+      return notPremium.splice(0, 5);
     },
   },
   methods: {},

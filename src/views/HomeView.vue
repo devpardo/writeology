@@ -2,6 +2,7 @@
   <section>
     <JumbotronComponent :articles="articles" />
     <MainSection :articles="articles" />
+    <PremiumContentSection :articles="premiumContent" />
   </section>
 </template>
 
@@ -9,12 +10,14 @@
 import { mapGetters, mapActions } from "vuex";
 import JumbotronComponent from "@/components/JumbotronComponent";
 import MainSection from "@/components/MainSection";
+import PremiumContentSection from "@/components/PremiumContentSection";
 
 export default {
   name: "HomeView",
   components: {
     JumbotronComponent,
     MainSection,
+    PremiumContentSection,
   },
 
   data: () => ({
@@ -25,6 +28,10 @@ export default {
     ...mapGetters(["getArticles"]),
     articles() {
       return this.getArticles;
+    },
+    premiumContent() {
+      let articles = [...this.getArticles];
+      return articles.filter((item) => item.premium_content).splice(0, 3);
     },
   },
   created() {
