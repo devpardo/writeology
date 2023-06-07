@@ -1,6 +1,7 @@
 <template>
   <div class="my-5">
     <div
+      v-if="article"
       class="popular-article d-flex align-items-end"
       :style="{
         backgroundImage: 'url(' + article.image_url + ')',
@@ -39,7 +40,8 @@ export default {
   },
   computed: {
     article() {
-      return this.articles.filter((item) => item.type == "resources")[0];
+      let articles = [...this.articles];
+      return articles.filter((item) => item.type == "resources")[0];
     },
     popularArticles() {
       let articles = [...this.articles];

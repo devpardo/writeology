@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5 mb-3 latest-item">
+  <div class="mt-5 mb-3 latest-item" @click="go(article.id)">
     <b-row align-v="center">
       <b-col cols="12" md="5">
         <div
@@ -47,6 +47,16 @@ export default {
     article: {
       required: true,
       type: Object,
+    },
+  },
+  methods: {
+    go(param) {
+      this.$router.push({
+        name: "post",
+        params: {
+          id: param,
+        },
+      });
     },
   },
 };

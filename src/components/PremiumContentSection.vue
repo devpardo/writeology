@@ -31,9 +31,9 @@
 
     <b-button
       size="lg"
-      class="d-flex align-items-center text-capitalize subscribe-btn bg-white text-dark border-0"
-      ><b-icon-lock class="icon mr-2" font-scale=".75"></b-icon-lock> Unlock
-      Content
+      class="d-flex align-items-center text-capitalize subscribe-btn bg-white text-dark border-0 px-4 py-2"
+      ><b-icon-lock class="icon mr-2" font-scale=".75"></b-icon-lock>
+      <strong>Unlock Content</strong>
     </b-button>
   </div>
 </template>
