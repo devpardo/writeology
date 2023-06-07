@@ -1,9 +1,10 @@
 <template>
   <div
+    @click="go(article.id)"
     class="premium-content-item d-flex align-items-end"
     :style="{ backgroundImage: 'url(' + article.image_url + ')' }"
   >
-    <div class="mb-5 p-3 text-left">
+    <div class="mb-5 p-3 text-left text-white item-content">
       <h6 class="text-uppercase">{{ article.type }}</h6>
       <h5 class="">
         <strong>{{ article.post_title }}</strong>
@@ -13,8 +14,10 @@
 </template>
 
 <script>
+import mixin from "@/mixin";
 export default {
   name: "PremiumContentItem",
+  mixins: [mixin],
   props: {
     article: {
       required: true,
@@ -31,6 +34,12 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+
+  .item-content {
+    z-index: 2;
+  }
 
   &::before {
     content: "";

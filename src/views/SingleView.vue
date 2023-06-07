@@ -1,5 +1,5 @@
 <template>
-  <div class="single-post-view">
+  <div class="single-post-view" v-if="article">
     <div
       class="single-post-header text-white"
       v-bind:style="{ backgroundImage: 'url(' + article.image_url + ')' }"
@@ -72,16 +72,18 @@
         </b-col>
       </b-row>
     </b-container>
-
     <PremiumContentSection :articles="premiumContent" />
+    <RelatedArticles :articles="articles" />
   </div>
 </template>
 
 <script>
 import PopularArticles from "@/components/PopularArticles";
-import PremiumContentSection from "@/components/PremiumContentSection.vue";
+import PremiumContentSection from "@/components/PremiumContentSection";
+import RelatedArticles from "@/components/RelatedArticles";
 import SearchComponent from "@/components/SearchComponent";
 import SocialsComponent from "@/components/SocialsComponent";
+
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "SingleView",
@@ -90,6 +92,7 @@ export default {
     SearchComponent,
     PremiumContentSection,
     SocialsComponent,
+    RelatedArticles,
   },
   computed: {
     ...mapGetters(["getArticles"]),
