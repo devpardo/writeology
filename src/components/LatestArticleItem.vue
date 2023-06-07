@@ -41,24 +41,17 @@
 </template>
 
 <script>
+import mixin from "@/mixin";
 export default {
   name: "LatestArticleItem",
+  mixins: [mixin],
   props: {
     article: {
       required: true,
       type: Object,
     },
   },
-  methods: {
-    go(param) {
-      this.$router.push({
-        name: "post",
-        params: {
-          id: param,
-        },
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 

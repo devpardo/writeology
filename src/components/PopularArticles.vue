@@ -6,6 +6,7 @@
       :style="{
         backgroundImage: 'url(' + article.image_url + ')',
       }"
+      @click="go(article.id)"
     >
       <div class="content text-white mb-4 px-3">
         <div class="mb-3 text-left">
@@ -27,9 +28,11 @@
 </template>
 
 <script>
+import mixin from "@/mixin";
 import PopularArticleItem from "@/components/PopularArticleItem";
 export default {
   name: "PopularArticles",
+  mixins: [mixin],
   data: () => ({
     image: "https://picsum.photos/800/1000/?image=99",
   }),

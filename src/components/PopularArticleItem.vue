@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-5 popular-item">
+  <div class="mb-5 popular-item" @click="go(article.id)">
     <b-row align-v="center">
       <b-col cols="5">
         <div
@@ -19,8 +19,10 @@
 </template>
 
 <script>
+import mixin from "@/mixin";
 export default {
   name: "PopularArticleItem",
+  mixins: [mixin],
   props: {
     article: {
       type: Object,

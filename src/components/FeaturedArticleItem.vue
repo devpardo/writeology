@@ -1,5 +1,8 @@
 <template>
-  <div class="mb-3 border-bottom py-3 text-left d-flex flex-column item-card">
+  <div
+    class="mb-3 border-bottom py-3 text-left d-flex flex-column item-card"
+    @click="go(article.id)"
+  >
     <h5 class="text-muted">
       {{ article.type }}
     </h5>
@@ -11,8 +14,10 @@
 </template>
 
 <script>
+import mixin from "@/mixin";
 export default {
   name: "FeaturedArticleItem",
+  mixins: [mixin],
   props: {
     article: {
       type: Object,

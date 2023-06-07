@@ -3,6 +3,7 @@
     v-if="article"
     class="featured-article text-white d-flex align-items-end"
     v-bind:style="{ backgroundImage: 'url(' + article.image_url + ')' }"
+    @click="go(article.id)"
   >
     <div class="w-100 text-left">
       <b-button
@@ -33,8 +34,10 @@
 </template>
 
 <script>
+import mixin from "@/mixin";
 export default {
   name: "FeaturedArticle",
+  mixins: [mixin],
   props: {
     article: {
       required: true,

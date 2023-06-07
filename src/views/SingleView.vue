@@ -58,14 +58,14 @@
     </div>
     <b-container>
       <b-row class="my-5">
-        <b-col cols="12" md="4">
+        <b-col cols="12" md="4" class="order-2 order-md-1">
           <SearchComponent />
           <PopularArticles :articles="articles" />
         </b-col>
-        <b-col cols="12" md="8">
-          <div class="text-left" v-html="article.post_body"></div>
+        <b-col cols="12" md="8" class="order-1 order-md-2">
+          <div class="text-left px-3" v-html="article.post_body_content"></div>
 
-          <div class="d-flex mt-5 pt-5 border-top">
+          <div class="d-flex mt-5 pt-5 border-top mb-5">
             <h5>Follow us on social media:</h5>
             <SocialsComponent size="1.3" class="ml-auto" />
           </div>
