@@ -7,16 +7,27 @@
           <LatestArticleItem :article="item" />
         </div>
       </b-col>
-      <b-col cols="12" md="4"> fadsfads </b-col>
+      <b-col cols="12" md="4" class="px-3">
+        <SearchComponent />
+
+        <PopularArticles />
+      </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
 import LatestArticleItem from "@/components/LatestArticleItem";
+import SearchComponent from "@/components/SearchComponent";
+import PopularArticles from "@/components//PopularArticles";
 
 export default {
   name: "MainSection",
+  components: {
+    SearchComponent,
+    LatestArticleItem,
+    PopularArticles,
+  },
   props: {
     articles: {
       required: true,
@@ -32,7 +43,6 @@ export default {
       return sortMe.splice(0, 5);
     },
   },
-  components: { LatestArticleItem },
   methods: {},
 };
 </script>

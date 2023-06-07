@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-3 latest-item">
+  <div class="mt-5 mb-3 latest-item">
     <b-row align-v="center">
       <b-col cols="12" md="5">
         <div
@@ -8,7 +8,7 @@
         ></div>
       </b-col>
       <b-col cols="12" md="7">
-        <div class="article-content">
+        <div class="article-content px-2">
           <h5 class="text-uppercase text-muted">{{ article.type }}</h5>
           <h4>
             <strong>
@@ -65,6 +65,7 @@ export default {
       padding-left: 1em;
       transition: 0.8s;
       -webkit-transition: 0.8s;
+      opacity: 0.8;
     }
 
     .article-image {
