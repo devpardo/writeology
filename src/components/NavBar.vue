@@ -84,13 +84,15 @@ export default {
   destroyed() {
     window.removeEventListener("resize", this.myEventHandler);
   },
+  watch: {
+    $route() {
+      this.menuOpen = false;
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-.header-wrapper {
-}
-
 .menu-links {
   margin: 0;
 
