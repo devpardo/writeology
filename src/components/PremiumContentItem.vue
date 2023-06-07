@@ -1,7 +1,7 @@
 <template>
   <div
     @click="go(article.id)"
-    class="premium-content-item d-flex align-items-end"
+    class="premium-content-item d-flex align-items-end mb-3 sm-mb-0"
     :style="{ backgroundImage: 'url(' + article.image_url + ')' }"
   >
     <div class="mb-5 p-3 text-left text-white item-content">

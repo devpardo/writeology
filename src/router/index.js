@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SingleView from '../views/SingleView.vue'
+import ContactView from '../views/ContactView.vue'
+import SubscribeView from '../views/SubscribeView.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +17,16 @@ const routes = [
     path: '/post/:id',
     name: 'post',
     component: SingleView
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: ContactView
+  },
+  {
+    path: '/subscribe',
+    name: 'subscribe',
+    component: SubscribeView
   },
   {
     path: '/about',
